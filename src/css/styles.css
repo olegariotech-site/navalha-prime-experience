@@ -3,3 +3,82 @@
 
 
 /* cache bump: restored full base CSS */
+
+
+/* === HIPASIA FIX 03: HERO PREMIUM CONTROLADO === */
+
+.hero {
+  min-height: 84svh !important;
+  padding-top: 108px !important;
+  padding-bottom: 86px !important;
+}
+
+.hero-media img {
+  opacity: .26 !important;
+  filter: brightness(.48) contrast(1.08) saturate(.72) !important;
+  transform: scale(1.08) !important;
+}
+
+.hero-gradient {
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.98) 0%, rgba(5,5,5,.88) 46%, rgba(5,5,5,.54) 100%),
+    linear-gradient(0deg, var(--black) 0%, rgba(5,5,5,.65) 36%, transparent 100%) !important;
+}
+
+.hero-content {
+  max-width: 570px !important;
+}
+
+.hero-title {
+  max-width: 570px !important;
+  font-size: clamp(3.15rem, 5.05vw, 5.45rem) !important;
+  line-height: .95 !important;
+  letter-spacing: -.065em !important;
+}
+
+.hero-copy {
+  max-width: 510px !important;
+  font-size: clamp(.98rem, 1.25vw, 1.08rem) !important;
+}
+
+.availability-card {
+  bottom: 15vh !important;
+  width: 300px !important;
+}
+
+.hero-marquee div {
+  font-size: clamp(.95rem, 2.05vw, 1.75rem) !important;
+  opacity: .62 !important;
+}
+
+.section {
+  padding-top: clamp(76px, 8vw, 104px) !important;
+  padding-bottom: clamp(76px, 8vw, 104px) !important;
+}
+
+.section-title {
+  font-size: clamp(2.1rem, 4.1vw, 3.85rem) !important;
+  line-height: .98 !important;
+}
+
+.split {
+  gap: 68px !important;
+}
+
+@media (max-width: 760px) {
+  .hero-title {
+    font-size: clamp(2.65rem, 12.5vw, 4rem) !important;
+  }
+
+  .hero-media img {
+    opacity: .18 !important;
+  }
+
+  .availability-card {
+    width: min(92vw, 340px) !important;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+  }
+}
