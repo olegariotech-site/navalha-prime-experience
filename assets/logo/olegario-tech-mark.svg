@@ -1,0 +1,6 @@
+<svg width="360" height="80" viewBox="0 0 360 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="360" height="80" rx="18" fill="#080808"/>
+<text x="24" y="48" fill="#F2EEE7" font-family="Arial, sans-serif" font-size="28" font-weight="800">OLEGARIO</text>
+<text x="186" y="48" fill="#C88A1A" font-family="Arial, sans-serif" font-size="28" font-weight="800">TECH</text>
+<path d="M24 61 H328" stroke="#C88A1A" opacity=".45"/>
+</svg>
