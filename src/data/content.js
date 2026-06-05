@@ -19,7 +19,7 @@ export const barbers = [
   { name: "Bruno Almeida", specialty: "Barba premium e toalha quente", image: "assets/images/barbers/barber-02.png", tags: ["Barba", "Navalha", "Combo"], highlight: "Barba clássica" },
   { name: "Diego Martins", specialty: "Corte social e executivo", image: "assets/images/barbers/barber-03.png", tags: ["Executivo", "Social", "Agenda rápida"], highlight: "Executivo" },
   { name: "Caio Nogueira", specialty: "Infantil, moderno e desenho", image: "assets/images/barbers/barber-04.png", tags: ["Kids", "Desenho", "Moderno"], highlight: "Família" },
-  { name: "Lucas Ferraz", specialty: "Pigmentação e transformação visual", image: "assets/images/barbers/barber-05.png", tags: ["Pigmentação", "Luzes", "Transformação"], highlight: "Transformação" }
+  { name: "Fernanda Silva", specialty: "Corte feminino e técnica de elite", image: "assets/images/barbers/barber-female.png", tags: ["Técnica", "Precisão", "Sofisticação"], highlight: "Elite" }
 ];
 
 export const plans = [
