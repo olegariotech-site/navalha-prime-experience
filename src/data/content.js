@@ -8,16 +8,16 @@ export const links = {
 };
 
 export const services = [
-  { category: "Mais pedidos", title: "Corte Masculino Premium", duration: "35 min", price: "R$ 65", image: "assets/images/services/corte.svg", description: "Corte alinhado, acabamento limpo e finalização com presença.", cta: "Agendar corte" },
-  { category: "Mais pedidos", title: "Barba com Toalha Quente", duration: "35 min", price: "R$ 65", image: "assets/images/services/barba.svg", description: "Barba desenhada, navalha precisa e ritual de cuidado masculino.", cta: "Agendar barba" },
-  { category: "Combo premium", title: "Cabelo + Barba", duration: "60 min", price: "R$ 130", image: "assets/images/services/combo.svg", description: "Visual completo para sair da cadeira pronto para dominar o dia.", cta: "Agendar combo" },
-  { category: "Recorrência", title: "Plano Sempre Alinhado", duration: "Mensal", price: "A partir de R$ 120/mês", image: "assets/images/services/assinatura.svg", description: "Assinatura para manter agenda, visual e presença sempre em dia.", cta: "Ver planos" }
+  { category: "Mais pedidos", title: "Corte Masculino Premium", duration: "35 min", price: "R$ 65", image: "assets/images/services/corte-premium.png", description: "Corte alinhado, acabamento limpo e finalização com presença.", cta: "Agendar corte" },
+  { category: "Mais pedidos", title: "Barba com Toalha Quente", duration: "35 min", price: "R$ 65", image: "assets/images/services/barba-premium.png", description: "Barba desenhada, navalha precisa e ritual de cuidado masculino.", cta: "Agendar barba" },
+  { category: "Combo premium", title: "Cabelo + Barba", duration: "60 min", price: "R$ 130", image: "assets/images/services/combo-premium.png", description: "Visual completo para sair da cadeira pronto para dominar o dia.", cta: "Agendar combo" },
+  { category: "Recorrência", title: "Plano Sempre Alinhado", duration: "Mensal", price: "A partir de R$ 120/mês", image: "assets/images/services/assinatura-premium.png", description: "Assinatura para manter agenda, visual e presença sempre em dia.", cta: "Ver planos" }
 ];
 
 export const barbers = [
-  { name: "Rafael Torres", specialty: "Degradê navalhado e corte moderno", image: "assets/images/barbers/barber-01.svg", tags: ["Degradê", "Freestyle", "Acabamento"], highlight: "Mais procurado" },
-  { name: "Bruno Almeida", specialty: "Barba premium e toalha quente", image: "assets/images/barbers/barber-02.svg", tags: ["Barba", "Navalha", "Combo"], highlight: "Barba clássica" },
-  { name: "Diego Martins", specialty: "Corte social e executivo", image: "assets/images/barbers/barber-03.svg", tags: ["Executivo", "Social", "Agenda rápida"], highlight: "Executivo" },
+  { name: "Rafael Torres", specialty: "Degradê navalhado e corte moderno", image: "assets/images/barbers/barber-01.png", tags: ["Degradê", "Freestyle", "Acabamento"], highlight: "Mais procurado" },
+  { name: "Bruno Almeida", specialty: "Barba premium e toalha quente", image: "assets/images/barbers/barber-02.png", tags: ["Barba", "Navalha", "Combo"], highlight: "Barba clássica" },
+  { name: "Diego Martins", specialty: "Corte social e executivo", image: "assets/images/barbers/barber-03.png", tags: ["Executivo", "Social", "Agenda rápida"], highlight: "Executivo" },
   { name: "Caio Nogueira", specialty: "Infantil, moderno e desenho", image: "assets/images/barbers/barber-04.svg", tags: ["Kids", "Desenho", "Moderno"], highlight: "Família" },
   { name: "Lucas Ferraz", specialty: "Pigmentação e transformação visual", image: "assets/images/barbers/barber-05.svg", tags: ["Pigmentação", "Luzes", "Transformação"], highlight: "Transformação" }
 ];
