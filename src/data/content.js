@@ -49,8 +49,8 @@ export const ctaFinal = {
   heading: "Sua barbearia já tem agenda. Agora precisa de uma vitrine premium que transforme visita em cliente.",
   copy: "Criamos sites premium integrados ao AppBarber, Trinks, WhatsApp ou à plataforma que você já usa. O app cuida da operação. A Olegario Tech cria desejo, organiza a decisão e leva o cliente para o agendamento.",
   testimonial: "Quando o cliente chega pela experiência certa, ele não pergunta só preço. Ele já chega entendendo valor, escolhendo barbeiro e querendo horário.",
-  testimonialAuthor: "Depoimento demonstrativo — dono de barbearia premium"
-  socialProof: "Modelo criado para barbearias de Valinhos/Campinas que querem vender mais presença, recorrência e agenda."
+  testimonialAuthor: "Depoimento demonstrativo — dono de barbearia premium",
+  socialProof: "Modelo criado para barbearias de Valinhos/Campinas que querem vender mais presença, recorrência e agenda.",
   urgency: "Clientes de Valinhos/Campinas — criem sua experiência em 7 dias."
 };
 
