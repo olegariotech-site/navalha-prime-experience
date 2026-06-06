@@ -44,7 +44,9 @@ function renderBarbers() {
     return `
       <article class="barber-card reveal ${index === 0 ? "active" : ""}" data-barber="${slug}">
         <span class="highlight">${barber.highlight}</span>
-        <img src="${barber.image}" alt="${barber.name}" loading="lazy">
+        <div class="barber-media">
+          <img src="${barber.image}" alt="${barber.name}" loading="lazy">
+        </div>
         <div class="barber-info">
           <h3 class="card-title">${barber.name}</h3>
           <p class="card-copy">${barber.specialty}</p>
@@ -77,6 +79,10 @@ function renderBarbers() {
 
   track.innerHTML = `
     <div class="barber-stage">${cards}</div>
+    <div class="barber-carousel-nav" aria-label="Controle dos especialistas">
+      <button class="carousel-btn" type="button" data-direction="prev" aria-label="Especialista anterior">‹</button>
+      <button class="carousel-btn" type="button" data-direction="next" aria-label="Próximo especialista">›</button>
+    </div>
     <div class="carousel-dots">${dots}</div>
   `;
 }
@@ -128,14 +134,24 @@ function renderGallery() {
   const grid = $("#galleryGrid");
   if (!grid) return;
 
-  grid.innerHTML = transformations.map((item) => `
-    <article class="transform-sequence reveal">
-      <div class="transform-inner">
-        <div class="transform-item"><span class="transform-label">Antes</span><img src="${item.before}" alt="Antes da transformação" class="parallax-img" loading="lazy"></div>
-        <div class="transform-item"><span class="transform-label">Durante</span><img src="${item.during}" alt="Durante o processo" class="parallax-img" loading="lazy"></div>
-        <div class="transform-item"><span class="transform-label">Depois</span><img src="${item.after}" alt="Depois da transformação" class="parallax-img" loading="lazy"></div>
+  grid.innerHTML = transformations.map((item, index) => `
+    <article class="transform-sequence reveal ${index % 2 ? "is-reverse" : ""}">
+      <div class="transform-inner" aria-label="${item.service}">
+        <div class="transform-item before">
+          <span class="transform-label">Antes</span>
+          <img src="${item.before}" alt="Antes — ${item.service}" class="parallax-img" loading="lazy">
+        </div>
+        <div class="transform-item during">
+          <span class="transform-label">Durante</span>
+          <img src="${item.during}" alt="Durante — ${item.service}" class="parallax-img" loading="lazy">
+        </div>
+        <div class="transform-item after">
+          <span class="transform-label">Depois</span>
+          <img src="${item.after}" alt="Depois — ${item.service}" class="parallax-img" loading="lazy">
+        </div>
       </div>
       <div class="transform-overlay">
+        <span class="transform-step">Transformação ${String(index + 1).padStart(2, "0")}</span>
         <h4 class="transform-service">${item.service}</h4>
         <p class="transform-description">${item.description}</p>
         <span class="transform-barber">Por ${item.barber}</span>
@@ -249,6 +265,7 @@ function setupCarousel3D() {
 
   const cards = $$(".barber-card", track);
   const dots = $$(".carousel-dot", track);
+  const arrows = $$(".carousel-btn", track);
   const totalCards = cards.length;
   let currentIndex = 0;
   let wheelLocked = false;
@@ -274,6 +291,12 @@ function setupCarousel3D() {
   }
 
   dots.forEach((dot, index) => dot.addEventListener("click", () => goTo(index)));
+
+  arrows.forEach((arrow) => {
+    arrow.addEventListener("click", () => {
+      arrow.dataset.direction === "next" ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
+    });
+  });
 
   track.addEventListener("wheel", (event) => {
     event.preventDefault();
