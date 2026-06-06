@@ -1,0 +1,305 @@
+/* === HIPASIA BARBERS CHOICE EXPERIENCE === */
+
+.barbers {
+  overflow: hidden;
+}
+
+.barbers .section-heading {
+  max-width: 940px;
+}
+
+.barbers .section-subtitle {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: rgba(242, 238, 231, .72);
+}
+
+.barber-selection-hint {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  margin: -18px auto 34px;
+  padding: 12px 16px;
+  border: 1px solid rgba(242, 238, 231, .12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+  color: rgba(242, 238, 231, .62);
+  font-size: .86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.barber-track {
+  display: block !important;
+  position: relative !important;
+  height: auto !important;
+  min-height: 690px !important;
+  overflow: visible !important;
+  padding: 0 0 86px !important;
+  perspective: 1400px;
+}
+
+.barber-stage {
+  position: relative;
+  min-height: 610px;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.barber-card {
+  width: min(390px, 86vw) !important;
+  min-width: 0 !important;
+  max-width: 390px !important;
+  position: absolute !important;
+  inset: auto !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(242, 238, 231, .12) !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(200, 138, 26, .18), transparent 42%),
+    rgba(10, 10, 10, .94) !important;
+  box-shadow: 0 34px 110px rgba(0, 0, 0, .54) !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  transform: translateX(0) translateZ(-260px) scale(.78) rotateY(0deg) !important;
+  transition:
+    transform .58s cubic-bezier(.22, 1, .36, 1),
+    opacity .45s ease,
+    filter .45s ease,
+    border-color .45s ease !important;
+  filter: saturate(.72) brightness(.76) !important;
+  z-index: 1 !important;
+}
+
+.barber-card.active {
+  opacity: 1 !important;
+  pointer-events: auto;
+  transform: translateX(0) translateZ(0) scale(1) rotateY(0deg) !important;
+  filter: saturate(1) brightness(1) !important;
+  border-color: rgba(200, 138, 26, .46) !important;
+  z-index: 10 !important;
+}
+
+.barber-card.next {
+  opacity: .46 !important;
+  transform: translateX(385px) translateZ(-190px) scale(.86) rotateY(-18deg) !important;
+  filter: saturate(.7) brightness(.64) blur(.2px) !important;
+  z-index: 4 !important;
+}
+
+.barber-card.prev {
+  opacity: .46 !important;
+  transform: translateX(-385px) translateZ(-190px) scale(.86) rotateY(18deg) !important;
+  filter: saturate(.7) brightness(.64) blur(.2px) !important;
+  z-index: 4 !important;
+}
+
+.barber-card img {
+  width: 100% !important;
+  height: 372px !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center 16% !important;
+  background: #070707;
+}
+
+.barber-info {
+  padding: 24px !important;
+}
+
+.barber-info .card-title {
+  font-size: 1.52rem;
+  margin-bottom: 10px;
+}
+
+.barber-authority {
+  color: rgba(242, 238, 231, .68);
+  line-height: 1.55;
+  margin: 0 0 16px;
+  font-size: .94rem;
+}
+
+.barber-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.barber-stat,
+.barber-next-slot {
+  border: 1px solid rgba(242, 238, 231, .10);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .045);
+  padding: 12px;
+}
+
+.barber-stat small,
+.barber-next-slot small {
+  display: block;
+  color: rgba(242, 238, 231, .48);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.barber-stat strong,
+.barber-next-slot strong {
+  color: var(--white);
+  font-size: .98rem;
+}
+
+.barber-next-slot {
+  margin: 0 0 16px;
+  border-color: rgba(37, 211, 102, .26);
+}
+
+.barber-next-slot strong {
+  color: var(--green);
+}
+
+.barber-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.barber-actions .btn {
+  width: 100%;
+  min-height: 48px;
+}
+
+.barber-actions .btn-outline {
+  border-color: rgba(242, 238, 231, .16);
+  color: rgba(242, 238, 231, .78);
+}
+
+.barber-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 54px auto 54px;
+  align-items: center;
+  gap: 18px;
+  z-index: 30;
+}
+
+.barber-arrow {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 138, 26, .46);
+  background: rgba(255, 255, 255, .045);
+  color: var(--gold-2);
+  cursor: pointer;
+  font-size: 1.45rem;
+  font-weight: 950;
+  display: grid;
+  place-items: center;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.barber-arrow:hover,
+.barber-arrow:focus-visible {
+  border-color: var(--gold-2);
+  background: rgba(200, 138, 26, .14);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.carousel-dots {
+  position: static !important;
+  transform: none !important;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 238, 231, .16);
+  background: rgba(242, 238, 231, .20);
+  cursor: pointer;
+  transition: width .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.carousel-dot.active {
+  width: 28px;
+  background: var(--gold-2);
+  box-shadow: 0 0 18px rgba(200, 138, 26, .34);
+}
+
+@media (max-width: 980px) {
+  .barber-track {
+    min-height: 665px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .barber-stage {
+    min-height: 585px;
+  }
+
+  .barber-card.next {
+    opacity: .24 !important;
+    transform: translateX(72vw) translateZ(-180px) scale(.76) rotateY(-16deg) !important;
+  }
+
+  .barber-card.prev {
+    opacity: .24 !important;
+    transform: translateX(-72vw) translateZ(-180px) scale(.76) rotateY(16deg) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .barber-selection-hint {
+    margin-top: -10px;
+    border-radius: 22px;
+    line-height: 1.45;
+  }
+
+  .barber-track {
+    min-height: 705px !important;
+  }
+
+  .barber-stage {
+    min-height: 610px;
+  }
+
+  .barber-card {
+    width: min(92vw, 380px) !important;
+  }
+
+  .barber-card img {
+    height: 340px !important;
+    object-position: center top !important;
+  }
+
+  .barber-card.next,
+  .barber-card.prev {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
+  .barber-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .barber-controls {
+    grid-template-columns: 48px auto 48px;
+    gap: 12px;
+    bottom: 8px;
+  }
+
+  .barber-arrow {
+    width: 48px;
+    height: 48px;
+  }
+}
