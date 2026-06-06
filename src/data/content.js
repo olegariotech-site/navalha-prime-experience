@@ -15,11 +15,11 @@ export const services = [
 ];
 
 export const barbers = [
-  { name: "Rafael Torres", specialty: "Degradê navalhado e corte moderno", image: "assets/images/barbers/barber-01.png", tags: ["Degradê", "Freestyle", "Acabamento"], highlight: "Mais procurado" },
-  { name: "Bruno Almeida", specialty: "Barba premium e toalha quente", image: "assets/images/barbers/barber-02.png", tags: ["Barba", "Navalha", "Combo"], highlight: "Barba clássica" },
-  { name: "Diego Martins", specialty: "Corte social e executivo", image: "assets/images/barbers/barber-03.png", tags: ["Executivo", "Social", "Agenda rápida"], highlight: "Executivo" },
-  { name: "Caio Nogueira", specialty: "Infantil, moderno e desenho", image: "assets/images/barbers/barber-04.png", tags: ["Kids", "Desenho", "Moderno"], highlight: "Família" },
-  { name: "Fernanda Silva", specialty: "Corte feminino e técnica de elite", image: "assets/images/barbers/barber-female.png", tags: ["Técnica", "Precisão", "Sofisticação"], highlight: "Elite" }
+  { name: "Rafael Torres", specialty: "Degradê navalhado e corte moderno", image: "assets/images/barbers/barber-01.png", tags: ["Degradê", "Freestyle", "Acabamento"], highlight: "Mais procurado", rating: "4.9★", jobs: "+620 atendimentos", nextSlot: "Hoje 16:00" },
+  { name: "Bruno Almeida", specialty: "Barba premium e toalha quente", image: "assets/images/barbers/barber-02.png", tags: ["Barba", "Navalha", "Combo"], highlight: "Barba clássica", rating: "4.8★", jobs: "+480 atendimentos", nextSlot: "Hoje 14:30" },
+  { name: "Diego Martins", specialty: "Corte social e executivo", image: "assets/images/barbers/barber-03.png", tags: ["Executivo", "Social", "Agenda rápida"], highlight: "Executivo", rating: "4.9★", jobs: "+540 atendimentos", nextSlot: "Hoje 17:45" },
+  { name: "Caio Nogueira", specialty: "Infantil, moderno e desenho", image: "assets/images/barbers/barber-04.png", tags: ["Kids", "Desenho", "Moderno"], highlight: "Família", rating: "4.7★", jobs: "+320 atendimentos", nextSlot: "Amanhã 10:00" },
+  { name: "Fernanda Silva", specialty: "Corte feminino e técnica de elite", image: "assets/images/barbers/barber-female.png", tags: ["Técnica", "Precisão", "Sofisticação"], highlight: "Elite", rating: "4.95★", jobs: "+710 atendimentos", nextSlot: "Hoje 15:15" }
 ];
 
 export const plans = [
@@ -37,4 +37,25 @@ export const testimonials = [
 export const units = [
   { name: "Navalha Prime — Centro", address: "Rua Barão do Café, 188 — Centro — Valinhos/SP", hours: "Seg. a sex.: 09h às 20h • Sáb.: 08h às 16h", map: links.mapsCentro },
   { name: "Navalha Prime — Jardim Aurora", address: "Av. das Palmeiras, 742 — Jardim Aurora — Valinhos/SP", hours: "Seg. a sex.: 10h às 21h • Sáb.: 08h às 17h", map: links.mapsAurora }
+];
+
+export const transformations = [
+  { barber: "Rafael Torres", service: "Degradê Navalhado Clássico", description: "Do volumoso ao precision-cut. Degradê perfeito com acabamento profissional e presença garantida.", before: "assets/images/gallery/transform-01-before.png", during: "assets/images/gallery/transform-02-during.png", after: "assets/images/gallery/transform-01-after.png" },
+  { barber: "Bruno Almeida", service: "Transformação Barba Premium", description: "Barba despenteada para barba desenhada. Técnica de navalha quente e acabamento refinado.", before: "assets/images/gallery/transform-03-before.png", during: "assets/images/gallery/transform-03-during.png", after: "assets/images/gallery/transform-03-after.png" },
+  { barber: "Diego Martins", service: "Corte Executivo Social", description: "Visual de presença para o day-to-day. Corte limpo, moderno e que dura a semana inteira.", before: "assets/images/gallery/transform-04-before.png", during: "assets/images/gallery/transform-04-during.png", after: "assets/images/gallery/transform-04-after.png" }
+];
+
+export const ctaFinal = {
+  heading: "Sua barbearia já tem agenda. Agora precisa de uma vitrine premium que transforme visita em cliente.",
+  copy: "Criamos sites premium integrados ao AppBarber, Trinks, WhatsApp ou à plataforma que você já usa. O app cuida da operação. A Olegario Tech cria desejo, organiza a decisão e leva o cliente para o agendamento.",
+  testimonial: "Quando o cliente chega pela experiência certa, ele não pergunta só preço. Ele já chega entendendo valor, escolhendo barbeiro e querendo horário.",
+  testimonialAuthor: "Depoimento demonstrativo — dono de barbearia premium"
+  socialProof: "Modelo criado para barbearias de Valinhos/Campinas que querem vender mais presença, recorrência e agenda."
+  urgency: "Clientes de Valinhos/Campinas — criem sua experiência em 7 dias."
+};
+
+export const availableSlots = [
+  { time: "14:30", urgency: "Apenas hoje" },
+  { time: "16:00", urgency: "Últimos 3" },
+  { time: "18:20", urgency: null }
 ];
